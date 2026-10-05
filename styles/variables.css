@@ -1,0 +1,186 @@
+:root {
+    --primary-color: red;
+    --secondary: rgb(87, 43, 43); 
+
+    --primary-spacing: 16px;
+    --secondary-spacing: 32px;
+
+    --heading-size: 4rem;
+    --sub-heading-size: 2rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--secondary);
+   margin: 0; 
+   min-height: 100vh;  
+}
+
+.main {
+    color: var(--primary-color);
+    padding: var(--primary-spacing);
+}
+
+.header {
+    color: var(--primary-color);
+    padding: var(--secondary-spacing);
+    animation: bgChange 15s 0s infinite alternate both;
+}
+
+
+.header-title {
+    margin: 0;
+    background-color: #333;
+}
+
+.introduction {
+    --primary-color: pink;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--secondary-spacing);
+    padding: var(--secondary-spacing);
+    color: var(--primary-color);
+}
+
+.content {
+    background-color: var(--primary-color);
+    color: var(--secondary);
+    padding: var(--primary-spacing);
+    border-radius: var(--secondary-spacing);
+    width: 50%;
+    transform: translate(50%, 10%)scale(1.0);
+    margin: 0;
+}
+
+.square {
+    background-color: aliceblue;
+    height: 30px;
+    position: relative;
+    left: 50%;
+    width: 20px;
+    transform: translateX(-50%);
+        
+}
+
+.scale {
+    background-color: black;
+    width: 50%;
+    height: var(--secondary-spacing);
+    margin: 16px;
+    padding: var(--primary-spacing);
+    
+}
+
+.rotate {
+    background-color: pink;
+    color: whitesmoke;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    transform: rotateX(20deg);
+}
+
+.skew {
+    background-color: var(--primary-color);
+    color: whitesmoke;
+    height: 200px;
+    width: 200px;
+    margin: 24px auto;
+    transform: skew(20deg);
+}
+
+.container {
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.shape {
+    position: absolute;
+    border-radius: var(--secondary-spacing);
+    height: 60%;
+    width: 50%;
+    transition: transform 0.3s;
+}
+
+.container:hover {
+    
+
+
+.orange {
+    background-color: orange;
+    transform: rotate(45deg);
+}
+
+.blue {
+    background-color: blue;
+    transform: rotate(30deg);
+}
+
+.green {
+    background-color: green;
+    transform: rotate(15deg);
+}
+
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.card-game {
+    margin-top: var(--secondary-spacing);
+    padding: var(--primary-spacing);
+    background-color: purple;
+}
+
+.card-container {
+    perspective: 1000px;
+}
+
+.cards {
+    height: 200px;
+    position: relative;
+    width: 150px;
+    transform-style: preserve-3d;
+    transition: transform linear 0.9s;
+}
+
+.cards:hover {
+    transform: rotateY(180deg);
+}
+
+.card {
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.card.front {
+    background: goldenrod;
+    z-index: 20;
+}
+
+.card.back {
+    background: royalblue;
+    z-index: 10;
+    transform: rotateY(180deg);
+}
+
+@keyframes bgChange {
+    0% {background-color:red;}
+    50% {background-color: yellow;}
+    100% {background-color:blue}
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --primary-color: gray;
+    }
+}
+
